@@ -6,11 +6,38 @@
             <h2>Desarrollador full stack</h2>
             <p>Desarollador Tanto como front end y back end</p>
         </div>
-        <div>
-            <a class="mt-8" mat-flat-button [color]="'primary'" [routerLink]="'/dashboards/project'">
-                <span>contactame</span>
-                <mat-icon class="ml-2 icon-size-5" [svgIcon]="'heroicons_mini:arrow-long-right'"></mat-icon>
-            </a>
+
+        <div class="container mx-auto px-4 bg-red-600 ">
+            <img class="w-20" src="assets/images/logo/logo.svg" alt="Logo image">
+            <h1>Portafolio Xavier</h1>
+            <h2>Desarrollador full stack</h2>
+            <p>Desarollador Tanto como front end y back end</p>
+        </div>
+
+        <div class="container mx-auto px-4 bg-green-500 ">
+            <form>
+                <!-- Nombre Completo field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput><!-- [formControlName]="'email'" -->
+                </mat-form-field>
+                <!-- Celular field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput><!-- [formControlName]="'email'" -->
+                </mat-form-field>
+                <!-- Correo field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Email address</mat-label>
+                    <input id="email" matInput><!-- [formControlName]="'email'" -->
+                    <mat-error *ngIf="signUpForm.get('email').hasError('required')">
+                        Email address is required
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('email').hasError('email')">
+                        Please enter a valid email address
+                    </mat-error>
+                </mat-form-field>
+            </form>
         </div>
     </div>
 </div>

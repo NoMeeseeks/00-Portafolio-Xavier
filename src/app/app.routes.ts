@@ -12,10 +12,6 @@ import { LayoutComponent } from 'app/layout/layout.component';
 export const appRoutes: Route[] = [
     {
         path: '',
-        component: LayoutComponent,
-        data: {
-            layout: 'empty'
-        },
         loadChildren: () => import('app/modules/landing/home/home.routes')
     },
 ];
